@@ -5,4 +5,4 @@
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
-## Всі домашки будуть розділенні по папках (наприклад: homework_1, homework_2, homework_3, ...)
+#### Всі домашки будуть розділенні по папках (наприклад: homework_1, homework_2, homework_3, ...)
