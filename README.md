@@ -3,4 +3,4 @@
 <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
-# Всі домашки будуть розділенні по папках (наприклад: homework_1, homework_2, homework_3, ...)
+# Р’СЃС– РґРѕРјР°С€РєРё Р±СѓРґСѓС‚СЊ СЂРѕР·РґС–Р»РµРЅРЅС– РїРѕ РїР°РїРєР°С… (РЅР°РїСЂРёРєР»Р°Рґ: homework_1, homework_2, homework_3, ...)
