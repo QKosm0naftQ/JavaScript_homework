@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <title>Таблиця множення</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="grid grid-cols-1 gap-4 text-center bg-white p-6 rounded-lg shadow-lg w-80">
+        <h2 id="task" class="text-2xl font-bold"></h2>
+        <div class="flex space-x-2">
+            <input id="answer" type="number" class="border p-2 w-full rounded" placeholder="Ваша відповідь" />
+            <button onclick="checkAnswer()" class="bg-blue-500 text-white px-4 py-2 rounded">Далі</button>
+        </div>
+        <p id="feedback" class="text-lg font-semibold"></p>
+    </div>
+
+    <script>
+        let num1, num2, correctAnswer;
+        let countNum = 1;
+        let maxquestions = Math.floor(Math.random() * 5) + 8;
+        let correctAnswersUser = 0;
+        function generateTask() {
+            num1 = Math.floor(Math.random() * 10) + 1;
+            num2 = Math.floor(Math.random() * 10) + 1;
+            correctAnswer = num1 * num2;
+            document.getElementById("task").innerHTML = `${num1} × ${num2} = ? <span style="font-size:15px; font-family: 'Courier New', Courier, monospace;">${countNum}/${maxquestions}</span>`;
+            document.getElementById("answer").value = "";
+            document.getElementById("feedback").textContent = "";
+        }
+
+        function checkAnswer() {
+            let userAnswer = parseInt(document.getElementById("answer").value);
+            if (countNum != maxquestions) {
+                if (userAnswer === correctAnswer) {
+                    document.getElementById("feedback").textContent = "✅ Правильно!";
+                    correctAnswersUser++;
+                } else {
+                    document.getElementById("feedback").textContent = "❌ Неправильно, спробуйте ще!";
+                }
+                countNum++;
+                setTimeout(generateTask, 500);
+            }
+            else {
+                document.getElementById("task").innerHTML = `<span style="font-size:18px;"> Ваша оцінка: ${correctAnswersUser} / ${maxquestions} = ${correctAnswersUser / maxquestions}%</span>`;
+                document.getElementById("answer").value = "";
+
+            }
+        }
+        generateTask();
+    </script>
+</body>
+</html>
+    
