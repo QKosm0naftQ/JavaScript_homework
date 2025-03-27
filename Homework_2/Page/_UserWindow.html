@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список користувачів</title>
+
+    <!--  -->
+    <link href="/Homework_2/css/cropper.min.css" rel="stylesheet" />
+    <script src="/Homework_2/js/cropper.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!--  -->
+
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg p-6">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">📋 Список користувачів 📋</h2>
+        <div id="user-list" class="divide-y divide-gray-300">
+        </div>
+    </div>
+
+    <div id="editUserModal_ID" class="fixed inset-0 hidden bg-gray-100/85 flex justify-center items-center z-50">
+        <div class="w-full space-y-4">
+            <!-- Форма редагування користувача -->
+            <form class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-xl w-full" id="formRegister">
+                <h2 class="text-2xl font-semibold text-gray-700 mb-6 text-center">Редагування користувача</h2>
+
+                <div class="relative z-0 w-full mb-6 group">
+                    <input type="email" id="user_email"
+                           class="block py-3 px-4 w-full text-md text-gray-900 bg-transparent border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 peer"
+                           placeholder=" " required />
+                    <label for="user_email"
+                           class="absolute text-md text-gray-500 bg-white px-2 left-3 -top-3 transform scale-90 peer-placeholder-shown:scale-100 peer-placeholder-shown:top-3 peer-focus:scale-90 peer-focus:-top-3 peer-focus:text-blue-500 transition-all">
+                        Електронна пошта
+                    </label>
+                </div>
+
+                <div class="relative z-0 w-full mb-6 group">
+                    <input type="password" id="user_password"
+                           class="block py-3 px-4 w-full text-md text-gray-900 bg-transparent border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 peer pr-10"
+                           placeholder=" " required />
+                    <label for="user_password"
+                           class="absolute text-md text-gray-500 bg-white px-2 left-3 -top-3 transform scale-90 peer-placeholder-shown:scale-100 peer-placeholder-shown:top-3 peer-focus:scale-90 peer-focus:-top-3 peer-focus:text-blue-500 transition-all">
+                        Пароль <span class="text-xs text-gray-400">(Якщо залишити пустим, буде старий пароль)</span>
+                    </label>
+
+                    <button type="button" id="toggle_password" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                        👁
+                    </button>
+                </div>
+
+                <div class="grid md:grid-cols-2 md:gap-6">
+                    <div class="relative z-0 w-full mb-6 group">
+                        <input type="text" id="user_first_name"
+                               class="block py-3 px-4 w-full text-md text-gray-900 bg-transparent border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 peer"
+                               placeholder=" " required />
+                        <label for="user_first_name"
+                               class="absolute text-md text-gray-500 bg-white px-2 left-3 -top-3 transform scale-90 peer-placeholder-shown:scale-100 peer-placeholder-shown:top-3 peer-focus:scale-90 peer-focus:-top-3 peer-focus:text-blue-500 transition-all">
+                            Ім'я
+                        </label>
+                    </div>
+                    <div class="relative z-0 w-full mb-6 group">
+                        <input type="text" id="user_last_name"
+                               class="block py-3 px-4 w-full text-md text-gray-900 bg-transparent border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 peer"
+                               placeholder=" " required />
+                        <label for="user_last_name"
+                               class="absolute text-md text-gray-500 bg-white px-2 left-3 -top-3 transform scale-90 peer-placeholder-shown:scale-100 peer-placeholder-shown:top-3 peer-focus:scale-90 peer-focus:-top-3 peer-focus:text-blue-500 transition-all">
+                            Прізвище
+                        </label>
+                    </div>
+                </div>
+
+                <div class="relative z-0 w-full mb-6 group">
+                    <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="user_phone"
+                           class="block py-3 px-4 w-full text-md text-gray-900 bg-transparent border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 peer"
+                           placeholder=" " required />
+                    <label for="user_phone"
+                           class="absolute text-md text-gray-500 bg-white px-2 left-3 -top-3 transform scale-90 peer-placeholder-shown:scale-100 peer-placeholder-shown:top-3 peer-focus:scale-90 peer-focus:-top-3 peer-focus:text-blue-500 transition-all">
+                        Номер телефону (123-456-7890)
+                    </label>
+                </div>
+
+                <div class="relative z-0 w-full mb-4 group flex items-center justify-center">
+                    <input type="file" id="picture_input" accept="image/*" class="hidden">
+                    <label for="picture_input" class="cursor-pointer flex items-center justify-center w-40 py-2 bg-blue-300 text-white rounded-md shadow-md hover:bg-blue-600 transition text-sm">
+                        Вибрати фото
+                    </label>
+                    <img id="result_image" src="/Homework_2/Photo/default_avatar.jpg" class="ml-4 w-24 h-24 object-cover rounded-md border border-gray-300 shadow-sm">
+                </div>
+
+                <div class="flex justify-between space-x-4 mt-6">
+                    <button type="button" id="SaveUser" class="flex items-center justify-center w-full py-3 text-lg text-white bg-green-600 hover:bg-green-700 rounded-md shadow-md transition-all">
+                        Зберегти
+                    </button>
+                    <button type="button" id="CancelSaveUser" class="flex items-center justify-center w-full py-3 text-lg text-white bg-red-600 hover:bg-red-700 rounded-md shadow-md transition-all">
+                        Скасувати
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script src="/Homework_2/js/LogicJS.js"></script>
+    <script src="/Homework_2/js/LoadPart.js"></script>
+    <script>loadDOM('/Homework_2/Page/ModalPictureCrop.html');</script>
+
+    <script>
+        const users = JSON.parse(localStorage.users || "[]");
+        const userList = document.getElementById("user-list");
+        const editUserModal = document.getElementById("editUserModal_ID");
+        const CancelSaveUser = document.getElementById("CancelSaveUser");
+        const SaveUser = document.getElementById("SaveUser");
+        let currentUserIndex = null;
+
+        users.forEach((user, index) => {
+            const userCard = document.createElement("div");
+            userCard.className = "flex items-center space-x-4 p-5 hover:bg-gray-100 transition duration-200";
+            userCard.innerHTML = `
+                                                    <img class="w-16 h-16 rounded-full border-2 border-gray-300"
+                                                            src="${user.avatar || 'https://via.placeholder.com/100'}"
+                                                            alt="${user.name}">
+                                                    <div>
+                                                        <p class="text-lg font-semibold text-gray-900">${user.first_name} ${user.last_name}</p>
+                                                        <p class="text-gray-600 text-sm">📧 ${user.email}</p>
+                                                        <p class="text-gray-600 text-sm">+${user.phone}</p>
+                                                    </div>
+                                                    <div class="flex space-x-2 ml-auto">
+                                                        <button class="bg-gray-300 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition" onclick="editUser(${index})">Змінити</button>
+                                                        <button class="bg-red-300 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition" onclick="deleteUser(${index})">Видалити</button>
+                                                    </div>
+                                                `;
+            userList.appendChild(userCard);
+        });
+        SaveUser.onclick = function () {
+            users[currentUserIndex] = {
+                email: document.getElementById("user_email").value,
+                first_name: document.getElementById("user_first_name").value,
+                last_name: document.getElementById("user_last_name").value,
+                phone: document.getElementById("user_phone").value,
+                password: document.getElementById("user_password").value || users[currentUserIndex].password,
+                avatar: document.getElementById("result_image").src
+            };
+            localStorage.setItem("users", JSON.stringify(users));
+            location.reload();
+        }
+        //
+        function editUser(index) {
+            if (editUserModal.classList.contains("hidden"))
+                editUserModal.classList.remove("hidden");
+            const user = users[index];
+            document.getElementById("user_email").value = user.email;
+            document.getElementById("user_first_name").value = user.first_name;
+            document.getElementById("user_last_name").value = user.last_name;
+            document.getElementById("user_phone").value = user.phone;
+            document.getElementById("user_password").value = "";
+            document.getElementById("result_image").src = user.avatar;
+
+            currentUserIndex = index;
+        }
+        function deleteUser(index) {
+            if (confirm(`Ви впевнені, що хочете видалити ${users[index].first_name} ${users[index].last_name}?`)) {
+                users.splice(index, 1);
+                localStorage.setItem("users", JSON.stringify(users));
+                location.reload();
+            }
+        }
+        //
+        function closeEditUserModal() {
+            editUserModal.classList.add("hidden");
+        }
+
+        picture_input.addEventListener("change", openModal);
+        //() {
+        //    //document.getElementById("PictureCropModal").classList.remove("hidden");
+        //    openModal();
+        //});
+        CancelSaveUser.addEventListener("click", closeEditUserModal);
+        document.getElementById("toggle_password").addEventListener("click", function () {
+            const passwordInput = document.getElementById("user_password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                this.textContent = "🙈";
+            } else {
+                passwordInput.type = "password";
+                this.textContent = "👁";
+            }
+        });
+    </script>
+
+
+</body>
+</html>

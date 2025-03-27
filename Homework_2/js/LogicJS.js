@@ -1,17 +1,16 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
-    //Modal window
+    // //Modal window
     const modalWindow = document.getElementById('PictureCropModal');
+
     const SaveImage = document.getElementById('SaveImage');
-    //Main window
-    const pictureInput = document.getElementById('picture_input');
-    const pictureResult = document.getElementById('result_image');
+    const CancelSaveImage = document.getElementById('CancelSaveImage');
     const leftArrow = document.getElementById('leftArrow');
     const RightArrow = document.getElementById('RightArrow');
-    //New funkc
     const croppingImage = document.getElementById("croppingImage");
     let uploadedImageURL;
     let cropper;
     function openModal(event) {
+        console.log('Modal відкритий!');
         modalWindow.classList.remove('hidden');
 
         const file = event.target.files[0];
@@ -34,12 +33,15 @@
             closeModal(pictureResult, base64);
         }
     }
-    function closeModal(MyPicture,image) {
-        if (MyPicture.classList.contains("hidden"))
-            MyPicture.classList.remove("hidden");
+    function closeModal(MyPicture, image) {
+        if (MyPicture && image) {
+            if (MyPicture.classList.contains("hidden"))
+                MyPicture.classList.remove("hidden");
+            MyPicture.src = image;
+        }
         modalWindow.classList.add('hidden');
-        MyPicture.src = image;
     }
+
 
     leftArrow.onclick = function () {
         if (cropper) {
@@ -52,5 +54,35 @@
         }
     }
     SaveImage.addEventListener('click', saveImage);
+    CancelSaveImage.addEventListener('click', closeModal);
+    // //Main window
+    const pictureResult = document.getElementById('result_image');
+    const pictureInput = document.getElementById('picture_input');
+
+    const formRegister = document.getElementById("formRegister");
+
+    formRegister.onsubmit = (e) => {
+        e.preventDefault(); 
+        const formData = {
+            first_name: document.getElementById("floating_first_name").value,
+            last_name: document.getElementById("floating_last_name").value,
+            email: document.getElementById("floating_email").value,
+            password: document.getElementById("floating_password").value,
+            phone: document.getElementById("floating_phone").value,
+            avatar: document.getElementById("result_image").src
+        }
+        const oldItems = JSON.parse(localStorage.users ?? "[]");
+        console.log("Old list", oldItems);
+
+        let items = [...oldItems, formData];
+
+        let json = JSON.stringify(items);
+        localStorage.setItem("users", json);
+        console.log("Submit form", json);
+        location.href = "Page/_UserWindow.html"; 
+    }
+
+
+
     pictureInput.addEventListener('change', openModal);
 });
