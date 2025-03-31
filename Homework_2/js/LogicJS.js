@@ -71,15 +71,43 @@
             phone: document.getElementById("floating_phone").value,
             avatar: document.getElementById("result_image").src
         }
-        const oldItems = JSON.parse(localStorage.users ?? "[]");
-        console.log("Old list", oldItems);
+        const xhr = new XMLHttpRequest();
+        const url = "https://goose.itstep.click/api/Account/register";
 
-        let items = [...oldItems, formData];
 
-        let json = JSON.stringify(items);
-        localStorage.setItem("users", json);
-        console.log("Submit form", json);
-        location.href = "Page/_UserWindow.html"; 
+        const data = {
+            email: formData.email,
+            firstName: formData.first_name,
+            secondName: formData.last_name,
+            photo: formData.avatar,
+            phone: formData.phone,
+            password: formData.password,
+            confirmPassword: formData.password
+        };
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    console.log("Success:", xhr.responseText);
+                } else {
+                    console.error("Error:", xhr.status, xhr.responseText);
+                }
+            }
+        };
+        xhr.send(JSON.stringify(data));
+
+        //LocalStorage save - old version
+        //const oldItems = JSON.parse(localStorage.users ?? "[]");
+        //console.log("Old list", oldItems);
+
+        //let items = [...oldItems, formData];
+
+        //let json = JSON.stringify(items);
+        //localStorage.setItem("users", json);
+        //console.log("Submit form", json);
+        //location.href = "Page/_UserWindow.html"; 
     }
 
 
