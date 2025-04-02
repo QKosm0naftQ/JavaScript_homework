@@ -1,4 +1,4 @@
-﻿const loadDOM = (path) => {
+﻿const loadFileHtml = (path) => {
     let xhr = new XMLHttpRequest();
     xhr.open("GET", path, false);
     xhr.send();

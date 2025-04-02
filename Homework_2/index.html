@@ -2,25 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Site lol</title>
-    <link href="/Homework_2/css/cropper.min.css" rel="stylesheet" />
-    <script src="/Homework_2/js/cropper.min.js"></script>
-    <!--  -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-    <!--  -->
-        
-
+    <title>Upane</title>
+    <script src="/Homework_2/js/load_assets.js"></script>
+    <script src="/Homework_2/js/MainJS/LoadPartCode.js"></script>
 </head>
 <body>
-    <script src="/Homework_2/js/LoadPart.js"></script>
-    <script src="/Homework_2/js/LogicJS.js"></script>
-
     <script>
-        loadDOM('/Homework_2/Page/_Header.html');
-        loadDOM('/Homework_2/Page/_main.html');
-        loadDOM('/Homework_2/Page/ModalPictureCrop.html');
+        loadFileHtml('/Homework_2/html/Parts/Header.html');
+        loadFileHtml('/Homework_2/html/Page/RegistrationForm.html');
+        loadFileHtml('/Homework_2/html/Parts/ModalCropSavePhoto.html');
     </script>
 </body>
 </html>

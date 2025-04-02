@@ -1,18 +1,18 @@
-﻿<div id="PictureCropModal" class="fixed inset-0 bg-gray-500/40 hidden flex justify-center items-center z-50">
+﻿<div id="photoEditModal" class="fixed inset-0 bg-gray-500/40 hidden flex justify-center items-center z-50">
     <div class="bg-white p-6 rounded-lg flex flex-col items-center max-w-full">
         <h2 class="text-xl font-semibold mb-4">/-Обріжте фото-/</h2>
         <img id="croppingImage" class="h-[200px] w-[300px] object-cover rounded-md" />
-        <div class="flex space-x-2">  
-           <button id="leftArrow" class="flex items-center justify-center text-4xl transform transition-transform duration-200 hover:scale-125">←</button>  
-           <button id="RightArrow" class="flex items-center justify-center text-4xl transform transition-transform duration-200 hover:scale-125">→</button>  
+        <div class="flex space-x-2">
+            <button id="leftRotate" class="flex items-center justify-center text-4xl transform transition-transform duration-200 hover:scale-125">←</button>
+            <button id="rightRotate" class="flex items-center justify-center text-4xl transform transition-transform duration-200 hover:scale-125">→</button>
         </div>
         <div class="flex space-x-2">
-            <button id="SaveImage"
+            <button id="SaveCroppingImage"
                     type="submit"
                     class="flex items-center justify-center w-[100px] py-4 text-lg text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-md transition-all">
                 Зберегти
             </button>
-            <button id="CancelSaveImage"
+            <button id="CancelSaveCroppingImage"
                     type="submit"
                     class="flex items-center justify-center w-[100px] py-4 text-lg text-white bg-red-600 hover:bg-red-700 rounded-md shadow-md transition-all">
                 Скасувати
