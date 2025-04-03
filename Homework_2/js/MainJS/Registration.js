@@ -1,6 +1,6 @@
 ﻿const formRegistration = document.getElementById('formRegistration'); 
 
-formRegistration.onsubmit = (e) => {
+formRegistration.onsubmit = async (e) => {
     e.preventDefault();
     ClearErrors();
     const formData = {
@@ -14,7 +14,7 @@ formRegistration.onsubmit = (e) => {
     const xhr = new XMLHttpRequest();
     const url = "https://goose.itstep.click/api/Account/register";
 
-    let newAvatar = convertImageToBase64(formData.avatar);
+    let newAvatar = await fetchImageAsBase64(formData.avatar); // convertImageToBase64(formData.avatar);
 
     const data = {
         email: formData.email,
@@ -61,19 +61,48 @@ formRegistration.onsubmit = (e) => {
         user_passwordError.hidden = true;
         user_successSubmit.hidden = true;
     }
-    function convertImageToBase64(imagePath) {
-        let result = null;
-        if (imagePath) {
-            fetch(imagePath)
-                .then(response => response.blob())
-                .then(blob => {
-                    const reader = new FileReader();
-                    reader.onloadend = function () {
-                        result = reader.result;
-                    };
-                    reader.readAsDataURL(blob);
-                });
+    //const convertImageToBase64 = async (imagePath) => {
+    //    let result = null;
+    //    if (imagePath) {
+    //        try {
+    //            const resp = await fetch(imagePath);
+    //            const blob = await resp.blob();
+
+    //            fetch(imagePath)
+    //                .then(response => response.blob())
+    //                .then(blob => {
+    //                    const reader = new FileReader();
+    //                    reader.onloadend = function () {
+    //                        result = reader.result;
+    //                    };
+    //                    reader.readAsDataURL(blob);
+    //                });
+    //        }
+    //        catch (error)
+    //        {
+    //            console.log("Error load image", error);
+    //            return null;
+    //        }
+    //        await
+
+            
+    //    }
+    //}
+
+    async function fetchImageAsBase64(imagePath) {
+        try {
+            const response = await axios.get(imagePath, { responseType: 'blob' });
+            const blob = response.data;
+
+            return await new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onloadend = () => resolve(reader.result);
+                reader.onerror = reject;
+                reader.readAsDataURL(blob);
+            });
+        } catch (error) {
+            console.error('Error fetching image:', error);
+            return null;
         }
-        return result;
     }
 }
