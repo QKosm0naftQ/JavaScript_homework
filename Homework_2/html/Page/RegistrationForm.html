@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <title>Регістрація</title>
-    <link href="/Homework_2/html/Parts/ModalCropSavePhoto.html" rel="stylesheet">
-    
+    <script src="/Homework_2/js/MainJS/LoadPartCode.js"></script>
+
 </head>
 <body>
     <div class="flex justify-center items-center min-h-screen bg-gray-100">
@@ -86,11 +86,10 @@
     </div>
 
 
-
-
-
-
-    <script src="/Homework_2/js/load_assets.js"></script>
+    <script>
+        loadFileHtml('/Homework_2/html/Assets.html');
+        loadFileHtml('/Homework_2/html/Parts/ModalCropSavePhoto.html');
+    </script>
     <script src="/Homework_2/js/MainJS/modalCropSave.js"></script>
     <script src="/Homework_2/js/MainJS/Registration.js"></script>
 </body>
