@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|c:\\users\\kostya\\source\\website\\js\\homework_2\\html\\parts\\header.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|solutionrelative:html\\parts\\header.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\page\\profile.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|solutionrelative:html\\page\\profile.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\js\\mainjs\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|solutionrelative:js\\mainjs\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\page\\loginform.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|solutionrelative:html\\page\\loginform.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Header.html",
+              "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Parts\\Header.html",
+              "RelativeDocumentMoniker": "html\\Parts\\Header.html",
+              "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Parts\\Header.html",
+              "RelativeToolTip": "html\\Parts\\Header.html",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACsAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-04T23:53:06.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Profile.html",
+              "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Page\\Profile.html",
+              "RelativeDocumentMoniker": "html\\Page\\Profile.html",
+              "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Page\\Profile.html",
+              "RelativeToolTip": "html\\Page\\Profile.html",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAEQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-04T23:28:54.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.js",
+              "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\js\\MainJS\\Login.js",
+              "RelativeDocumentMoniker": "js\\MainJS\\Login.js",
+              "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\js\\MainJS\\Login.js",
+              "RelativeToolTip": "js\\MainJS\\Login.js",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-04T23:11:40.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginForm.html",
+              "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Page\\LoginForm.html",
+              "RelativeDocumentMoniker": "html\\Page\\LoginForm.html",
+              "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Page\\LoginForm.html",
+              "RelativeToolTip": "html\\Page\\LoginForm.html",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-04T22:52:11.068Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

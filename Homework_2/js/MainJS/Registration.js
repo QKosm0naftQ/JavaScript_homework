@@ -14,7 +14,7 @@ formRegistration.onsubmit = async (e) => {
     const xhr = new XMLHttpRequest();
     const url = "https://goose.itstep.click/api/Account/register";
 
-    let newAvatar = await fetchImageAsBase64(formData.avatar); // convertImageToBase64(formData.avatar);
+    let newAvatar = await fetchImageAsBase64(formData.avatar); 
 
     const data = {
         email: formData.email,
@@ -50,7 +50,7 @@ formRegistration.onsubmit = async (e) => {
                     errorMessages = fieldErrors;
                     switch (field) {
                         case "email": { user_emailError.hidden = false; user_emailError.textContent = errorMessages; break; }
-                        case "password": { user_passwordError.hidden = false; user_passwordError = errorMessages; break; }
+                        case "password": { user_passwordError.hidden = false; user_passwordError.textContent = errorMessages; break; }
                     }
                 }
             }
@@ -61,33 +61,6 @@ formRegistration.onsubmit = async (e) => {
         user_passwordError.hidden = true;
         user_successSubmit.hidden = true;
     }
-    //const convertImageToBase64 = async (imagePath) => {
-    //    let result = null;
-    //    if (imagePath) {
-    //        try {
-    //            const resp = await fetch(imagePath);
-    //            const blob = await resp.blob();
-
-    //            fetch(imagePath)
-    //                .then(response => response.blob())
-    //                .then(blob => {
-    //                    const reader = new FileReader();
-    //                    reader.onloadend = function () {
-    //                        result = reader.result;
-    //                    };
-    //                    reader.readAsDataURL(blob);
-    //                });
-    //        }
-    //        catch (error)
-    //        {
-    //            console.log("Error load image", error);
-    //            return null;
-    //        }
-    //        await
-
-            
-    //    }
-    //}
 
     async function fetchImageAsBase64(imagePath) {
         try {

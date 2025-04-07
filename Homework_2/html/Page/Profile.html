@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Сторінка користувача</title>
+    <script src="/js/MainJS/LoadPartCode.js"></script>
+
+</head>
+<body>
+    <script>
+        loadFileHtml('/html/Assets.html');  ////// -------------------- Помилка , фото яке приходить з сервера не відображається , напевно поганий url або тип фото
+    </script>
+
+    <div class="flex items-center justify-center min-h-screen bg-gray-100">
+        <div class="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-3xl flex flex-col lg:flex-row items-center gap-8">
+            <div class="relative">
+                <img id="userPhoto"
+                     class="w-40 h-40 rounded-full border-4 border-[#0db865] shadow-lg object-cover"
+                     src="/images/no-avatar.png"
+                     alt="User Photo">
+                <div class="absolute bottom-0 right-2 bg-[#0db865] p-2 rounded-full shadow-md cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white"
+                         class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M15.232 5.232l3.536 3.536M9 15h3.586a2 2 0 0 0 1.414-.586l7.414-7.414a2 2 0 0 0 0-2.828l-2.828-2.828a2 2 0 0 0-2.828 0l-7.414 7.414A2 2 0 0 0 9 11.414V15zM9 15v3a1 1 0 0 0 1 1h3" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="text-center lg:text-left">
+                <h2 class="text-3xl font-extrabold text-[#0db865]">Welcome, <span id="userName">User Name</span>!</h2>
+                <p class="text-gray-600 mt-3 text-lg"><strong>Email:</strong> <span id="userEmail">user@example.com</span></p>
+                <p class="text-gray-600 text-lg"><strong>Phone:</strong> <span id="userPhone">+1234567890</span></p>
+
+                <!-- Кнопки -->
+                <!--<div class="mt-6 flex flex-col lg:flex-row gap-4">
+                    <button class="px-6 py-2 bg-[#0db865] text-white rounded-lg shadow-md hover:bg-green-600 transition duration-300">
+                        Edit Profile
+                    </button>
+                    <button class="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg shadow-md hover:bg-gray-300 transition duration-300">
+                        Logout
+                    </button>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <script>
+        const token = localStorage.getItem("token"); 
+        axios.get('https://goose.itstep.click/api/Account/profile', {
+            headers: {
+                'accept': '*/*',
+                'Authorization': `Bearer ${token}`
+            }
+        }).then(resp => {
+            const { data } = resp;
+            const { id, email, firstName, secondName, phone, photo } = data;
+            document.getElementById("userPhoto").src = `https://goose.itstep.click/images/${photo}`;
+            document.getElementById("userName").innerText = `${secondName} ${firstName}`;
+            document.getElementById("userEmail").innerText = ` ${email}`;
+            document.getElementById("userPhone").innerText = ` ${phone}`;
+            const user = {
+                id,
+                email,
+                firstName,
+                secondName,
+                phone,
+                photo
+            };
+            localStorage.setItem("User", JSON.stringify(user));
+            console.log("User profile", data);
+        }).catch(err => {
+            console.log("Error", err);
+        });
+    </script>
+
+</body>
+</html>
