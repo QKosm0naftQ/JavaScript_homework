@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Адмін панель</title>
+    <script src="/js/MainJS/LoadPartCode.js"></script>
+</head>
+<body>
+    <script>loadFileHtml('/html/Assets.html');</script>
+    <div class="flex pt-16 min-h-screen">
+        <aside class="w-64 bg-white border-r border-gray-200 shadow h-full fixed top-16 left-0">
+            <div class="p-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Панель</h2>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="flex items-center p-2 text-gray-700 rounded hover:bg-gray-100">
+                            🏠 <span class="ml-2">Головна</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 text-gray-700 rounded hover:bg-gray-100">
+                            👤 <span class="ml-2">Користувачі</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 text-gray-700 rounded hover:bg-gray-100">
+                            📁 <span class="ml-2">Проекти</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 text-gray-700 rounded hover:bg-gray-100">
+                            🚪 <span class="ml-2">Вихід</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Контент (правий бік) -->
+        <main class="ml-64 p-6 w-full">
+            <p class="text-gray-600">Тут поки порожньо :)</p>
+        </main>
+    </div>
+
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 ﻿const formRegistration = document.getElementById('formLogin');
 
 formRegistration.onsubmit = async (e) => {
+    show_loading();
     e.preventDefault();
     ClearErrors();
     const formData = {
@@ -17,21 +18,37 @@ formRegistration.onsubmit = async (e) => {
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
 
-    xhr.onreadystatechange = function () {
+    xhr.onreadystatechange = async function () {
         if (xhr.readyState === 4) {
             if (xhr.status >= 200 && xhr.status < 300) {
-                console.log("Success:", xhr.responseText);
-                //
+                    //console.log("Success:", xhr.responseText);
                 const resp = xhr.responseText;
                 const token = JSON.parse(resp).token;
-                console.log("Success:", token);
+                    //console.log("Success:", token);
                 localStorage.setItem("token", token);
-                location.href = "/html/Page/Profile.html";
-                //
+                    // if admin 
+                try {
+                    const response = await axios.get('https://goose.itstep.click/api/Users/all', {
+                        headers: {
+                            'accept': '*/*',
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+                    localStorage.setItem("UserRights", "Admin");
+                    location.href = "/html/Page/AdminPanel/MainWindow.html";
+                } catch (error) {
+                    localStorage.setItem("UserRights", "Default");
+                    location.href = "/html/Page/Profile.html";
+                }
+
+
                 user_successSubmit.hidden = false;
+                hide_loading();
             } else {
                 ErrorMessage(xhr.responseText);
+                hide_loading();
             }
+        
         }
     };
     xhr.send(JSON.stringify(data));

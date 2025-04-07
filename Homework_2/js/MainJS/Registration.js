@@ -1,6 +1,7 @@
 ﻿const formRegistration = document.getElementById('formRegistration'); 
 
 formRegistration.onsubmit = async (e) => {
+    show_loading();
     e.preventDefault();
     ClearErrors();
     const formData = {
@@ -36,6 +37,7 @@ formRegistration.onsubmit = async (e) => {
             } else {
                 ErrorMessage(xhr.responseText);
             }
+            hide_loading();
         }
     };
     xhr.send(JSON.stringify(data));
