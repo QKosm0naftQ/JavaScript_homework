@@ -35,7 +35,7 @@ formRegistration.onsubmit = async (e) => {
                         }
                     });
                     localStorage.setItem("UserRights", "Admin");
-                    location.href = "/html/Page/AdminPanel/MainWindow.html";
+                    location.href = "/html/Page/AdminPanel/AdminPage.html";
                 } catch (error) {
                     localStorage.setItem("UserRights", "Default");
                     location.href = "/html/Page/Profile.html";

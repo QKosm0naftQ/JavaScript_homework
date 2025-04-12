@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Додати категорію</title>
+    <script src="/js/MainJS/LoadPartCode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/speakingurl/13.0.0/speakingurl.min.js"></script>
+    <script src="/js/MainJS/modalCropSave.js"></script>
+</head>
+<body>
+    <script>loadFileHtml('/html/Assets.html');</script>
+    <script>loadFileHtml('/html/Parts/ModalCropSavePhoto.html');</script>
+
+    <div class="flex pt-11">
+        <script>loadFileHtml('/html/Parts/AsideAdminPanel.html');</script>
+        <main id="addCategoryPage" class="flex-1 p-6 max-w-5xl mx-auto">
+            <div class="relative bg-white rounded-lg shadow-2xl">
+                <form class="p-6 space-y-6" id="categoryForm" action="#">
+                    <div class="flex justify-center items-center mb-4">
+                        <img id="user_avatar"
+                             class="w-24 h-24 rounded-lg object-cover border border-gray-300"
+                             src="/Photo/default_avatar.png"
+                             alt="Category Icon" />
+                    </div>
+
+                    <div class="grid gap-4 grid-cols-1 w-full">
+                        <div class="flex justify-center">
+                            <input type="file"
+                                   id="user_input_picture"
+                                   accept="image/*"
+                                   class="hidden" />
+
+                            <label for="user_input_picture"
+                                   class="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm px-5 py-2.5 rounded-lg transition cursor-pointer">
+                                Виберіть аватарку для категорії
+                            </label>
+                        </div>
+
+                        <div class="relative z-0 w-full mb-6 group">
+                            <input type="text"
+                                   id="name"
+                                   oninput="updateSlug()"
+                                   placeholder=" "
+                                   required
+                                   class="block py-3 px-4 w-full text-md text-gray-900 bg-transparent border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500 peer" />
+                            <label for="name"
+                                   class="absolute text-md text-gray-500 bg-white px-2 left-3 -top-3 transform scale-90 peer-placeholder-shown:scale-100 peer-placeholder-shown:top-3 peer-focus:scale-90 peer-focus:-top-3 peer-focus:text-pink-500 transition-all">
+                                Назва категорії
+                            </label>
+                            <div>
+                                <label id="name_error" hidden class=" text-red-500 text-sm font-medium w-full"></label>
+                            </div>
+                        </div>
+
+                        <div class="relative z-0 w-full mb-6 group">
+                            <input type="text"
+                                   id="slug"
+                                   placeholder=" "
+                                   disabled
+                                   class="block py-3 px-4 w-full text-md text-gray-900 bg-gray-100 border border-gray-300 rounded-md focus:outline-none peer" />
+                            <label for="slug"
+                                   class="absolute text-md text-gray-500  px-2 left-3 -top-3 transform scale-90 peer-placeholder-shown:scale-100 peer-placeholder-shown:top-3 peer-focus:scale-90 peer-focus:-top-3 transition-all">
+                                Згенерований urlSlug
+                            </label>
+                            <div>
+                                <label id="slug_error" hidden class=" text-red-500 text-sm font-medium w-full"></label>
+                            </div>
+                        </div>
+                        <label id="slugError" hidden class="text-red-500 text-sm font-medium w-full"></label>
+
+                        <div class="relative z-0 w-full mb-6 group">
+                            <input type="number"
+                                   id="priority"
+                                   placeholder=" "
+                                   required
+                                   class="block py-3 px-4 w-full text-md text-gray-900 bg-transparent border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500 peer" />
+                            <label for="priority"
+                                   class="absolute text-md text-gray-500 bg-white px-2 left-3 -top-3 transform scale-90 peer-placeholder-shown:scale-100 peer-placeholder-shown:top-3 peer-focus:scale-90 peer-focus:-top-3 peer-focus:text-pink-500 transition-all">
+                                Пріоритет
+                            </label>
+                            <div>
+                                <label id="priority_error" hidden class=" text-red-500 text-sm font-medium w-full"></label>
+                            </div>
+                        </div>
+
+
+                        <button type="submit"
+                                class="w-full inline-flex items-center justify-center text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mt-4 transition">
+                            + Додати категорію
+                        </button>
+
+                        <div id="pbContainer"
+                             class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div id="categoryPB"
+                                 class="bg-green-600 h-2.5 rounded-full transition-all duration-300"
+                                 style="width: 0%"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <script src="/js/MainJS/AdminPanelJS/Categories_add.js"></script>
+    </div>
+</body>
+</html>
+
+
+<script>
+    function updateSlug() {
+        document.getElementById("slug").value = getSlug(document.getElementById("name").value);
+    }
+</script>
+
+
+
+
