@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|c:\\users\\kostya\\source\\website\\js\\homework_2\\html\\page\\adminpanel\\categories\\view.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|solutionrelative:html\\page\\adminpanel\\categories\\view.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|c:\\users\\kostya\\source\\website\\js\\homework_2\\js\\mainjs\\adminpaneljs\\categories_view.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|solutionrelative:js\\mainjs\\adminpaneljs\\categories_view.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|c:\\users\\kostya\\source\\website\\js\\homework_2\\html\\page\\adminpanel\\adminpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|solutionrelative:html\\page\\adminpanel\\adminpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|c:\\users\\kostya\\source\\website\\js\\homework_2\\html\\parts\\header.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\parts\\header.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|solutionrelative:html\\parts\\header.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,20 +38,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Categories_view.js",
+              "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\js\\MainJS\\AdminPanelJS\\Categories_view.js",
+              "RelativeDocumentMoniker": "js\\MainJS\\AdminPanelJS\\Categories_view.js",
+              "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\js\\MainJS\\AdminPanelJS\\Categories_view.js",
+              "RelativeToolTip": "js\\MainJS\\AdminPanelJS\\Categories_view.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-13T21:08:21.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "View.html",
+              "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Page\\AdminPanel\\Categories\\View.html",
+              "RelativeDocumentMoniker": "html\\Page\\AdminPanel\\Categories\\View.html",
+              "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Page\\AdminPanel\\Categories\\View.html",
+              "RelativeToolTip": "html\\Page\\AdminPanel\\Categories\\View.html",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-13T21:08:14.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AdminPage.html",
               "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Page\\AdminPanel\\AdminPage.html",
               "RelativeDocumentMoniker": "html\\Page\\AdminPanel\\AdminPage.html",
               "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Page\\AdminPanel\\AdminPage.html",
               "RelativeToolTip": "html\\Page\\AdminPanel\\AdminPage.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-04-13T01:29:15.841Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Header.html",
               "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Parts\\Header.html",
               "RelativeDocumentMoniker": "html\\Parts\\Header.html",
@@ -51,8 +85,7 @@
               "RelativeToolTip": "html\\Parts\\Header.html",
               "ViewState": "AgIAABgAAAAAAAAAAAAAACkAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-04-13T01:28:32.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T01:28:32.688Z"
             }
           ]
         }

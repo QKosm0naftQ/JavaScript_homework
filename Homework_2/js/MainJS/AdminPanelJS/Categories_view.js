@@ -35,7 +35,10 @@ async function fetchCategories() {
                             ${item.priority}
                         </td>
                         <td class="px-6 py-4">
-                            <a href="${item.id}" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
+                            <ul>
+                                <li> <a href="${item.id}" class="font-medium text-red-600 dark:text-red-500 hover:underline">Видалити</a></li>
+                                <li> <a href="/html/Page/AdminPanel/Categories/Edit.html?id=${item.id}" class="font-medium text-red-600 dark:text-red-500 hover:underline">Редагувати</a></li>
+                            </ul>
                         </td>
                     </tr>
                         `;

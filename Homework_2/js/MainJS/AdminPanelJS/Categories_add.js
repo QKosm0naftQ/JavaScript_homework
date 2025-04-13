@@ -30,7 +30,7 @@ categiryForm.onsubmit = async (e) => {
 
                         if (i <= 100) {
                             categoryPB.style.width = i + "%";
-                            i += 5;
+                            i += 12.5;
                         } else {
                             clearInterval(interval);
                             location.href = "/html/Page/AdminPanel/AdminPage.html";
