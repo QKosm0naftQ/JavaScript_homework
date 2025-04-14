@@ -36,7 +36,16 @@ async function fetchCategories() {
                         </td>
                         <td class="px-6 py-4">
                             <ul>
-                                <li> <a href="${item.id}" class="font-medium text-red-600 dark:text-red-500 hover:underline">Видалити</a></li>
+                                <li>
+                                <button onclick="openDeleteModal(this)"
+                                        data-id="${item.id}"
+                                        data-title="${item.title}"
+                                        data-slug="${item.urlSlug}"
+                                        class="font-medium text-red-600 dark:text-red-500 hover:underline">
+                                    Видалити
+                                </button>
+
+                                </li>
                                 <li> <a href="/html/Page/AdminPanel/Categories/Edit.html?id=${item.id}" class="font-medium text-red-600 dark:text-red-500 hover:underline">Редагувати</a></li>
                             </ul>
                         </td>

@@ -1,0 +1,64 @@
+﻿<div id="deleteModal"
+     class="fixed inset-0 z-50 hidden bg-gray-500/40 flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-md p-6 relative">
+        <button onclick="closeDeleteModal()"
+                class="absolute top-2 right-2 text-gray-400 hover:text-gray-900 text-xl font-bold">
+            ✖
+        </button>
+
+        <h3 class="text-xl font-semibold text-red-600 mb-4">Видалити категорію</h3>
+        <p class="text-gray-700"><strong>Назва:</strong> <span id="modalCategoryTitle"></span></p>
+        <p class="text-gray-700 mb-4"><strong>Slug:</strong> <span id="modalCategorySlug"></span></p>
+
+        <div class="flex justify-end gap-4 mt-6">
+            <button onclick="closeDeleteModal()"
+                    class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+                Скасувати
+            </button>
+            <button onclick="confirmDeleteCategory()"
+                    class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
+                Видалити
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    let selectedCategoryId = null;
+
+    function openDeleteModal(button) {
+        const id = button.dataset.id;
+        const title = button.dataset.title;
+        const slug = button.dataset.slug;
+
+        selectedCategoryId = id;
+        document.getElementById("modalCategoryTitle").textContent = title;
+        document.getElementById("modalCategorySlug").textContent = slug;
+
+        document.getElementById("deleteModal").classList.remove("hidden");
+    }
+
+    function closeDeleteModal() {
+        document.getElementById("deleteModal").classList.add("hidden");
+    }
+
+    function confirmDeleteCategory() {
+        console.log("Видаляємо категорію з id:", selectedCategoryId);
+
+        axios.delete(`https://goose.itstep.click/api/Categories/delete/${selectedCategoryId}`)
+            .then(response => {
+                console.log("Успішно видалено:", response.data);
+                closeDeleteModal();
+
+                location.reload(); 
+            })
+            .catch(error => {
+                console.error("Помилка при видаленні:", error);
+                alert("Не вдалося видалити категорію.");
+            });
+        
+
+        closeDeleteModal();
+    }
+</script>
