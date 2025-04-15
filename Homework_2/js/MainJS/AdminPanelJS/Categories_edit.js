@@ -8,7 +8,7 @@ function getCategoryIdFromUrl() {
 }
 
 async function loadCategoryData(id) {
-    const itemGet = await axios.get(`https://goose.itstep.click/api/Categories/get/${id}`, {
+    const itemGet = await axios.get(`${window.API_BASE_URL}/api/Categories/get/${id}`, {
         headers: {
             'Accept': '*/*'
         }
@@ -18,7 +18,7 @@ async function loadCategoryData(id) {
     document.getElementById("name").value = data.title;
     document.getElementById("slug").value = data.urlSlug;
     document.getElementById("priority").value = data.priority;
-    document.getElementById("user_avatar").src = `https://goose.itstep.click/images/200_${data.image}`;
+    document.getElementById("user_avatar").src = `${window.API_BASE_URL}/images/200_${data.image}`;
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -44,7 +44,7 @@ editCategoryForm.onsubmit = async (e) => {
         urlSlug: document.getElementById("slug").value,
         image: newAvatar
     }
-    axios.put("https://goose.itstep.click/api/Categories/edit", data, {
+    axios.put(`${window.API_BASE_URL}/api/Categories/edit`, data, {
         headers: {
             "Content-Type": "application/json"
         }
@@ -71,7 +71,7 @@ editCategoryForm.onsubmit = async (e) => {
     });
 
     //const xhr = new XMLHttpRequest();
-    //const url = "https://goose.itstep.click/api/Categories/edit";
+    //const url = "${window.API_BASE_URL}/api/Categories/edit";
 
     //xhr.open("POST", url, true);
     //xhr.setRequestHeader("Content-Type", "application/json");

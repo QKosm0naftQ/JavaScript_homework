@@ -8,7 +8,7 @@ let search = {
 async function fetchCategories() {
     try {   
         const query = Qs.stringify(search);
-        const response = await axios.get(`https://goose.itstep.click/api/Categories/search?${query}`, {
+        const response = await axios.get(`${window.API_BASE_URL}/api/Categories/search?${query}`, {
             headers: {
                 'Accept': '*/*'
             }
@@ -22,7 +22,7 @@ async function fetchCategories() {
             listCategories.innerHTML += `
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
                         <td class="p-4">
-                            <img src="https://goose.itstep.click/images/200_${item.image}" class="" alt="Apple Watch">
+                            <img src="${window.API_BASE_URL}/images/200_${item.image}" class="" alt="Apple Watch">
                         </td>
                         <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
                             ${item.title}
@@ -62,7 +62,7 @@ fetchCategories();
 
 document.getElementById("searchBtn").addEventListener("click", async function (event) {
     try {
-        const allItemList = await axios.get('https://goose.itstep.click/api/Categories/list', {
+        const allItemList = await axios.get(`${window.API_BASE_URL}/api/Categories/list`, {
             headers: {
                 'Accept': '*/*'
             }
@@ -76,7 +76,7 @@ document.getElementById("searchBtn").addEventListener("click", async function (e
                     `
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <td class="p-4">
-                                <img src="https://goose.itstep.click/images/200_${item.image}" class="" alt="Apple Watch">
+                                <img src="${window.API_BASE_URL}/images/200_${item.image}" class="" alt="Apple Watch">
                             </td>
                             <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
                                 ${item.title}

@@ -26,3 +26,7 @@ const loadFileHtml_returnSomeAsync = async (path) => {
         xhr.send();
     });
 }
+
+
+
+window.API_BASE_URL = 'http://localhost:5227';

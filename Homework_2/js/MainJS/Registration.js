@@ -13,7 +13,7 @@ formRegistration.onsubmit = async (e) => {
         avatar: document.getElementById("user_avatar").src
     }
     const xhr = new XMLHttpRequest();
-    const url = "https://goose.itstep.click/api/Account/register";
+    const url = `${window.API_BASE_URL}/api/Account/register`;
 
     let newAvatar = await fetchImageAsBase64(formData.avatar); 
 

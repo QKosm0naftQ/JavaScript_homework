@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|c:\\users\\kostya\\source\\website\\js\\homework_2\\html\\page\\adminpanel\\categories\\view.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|solutionrelative:html\\page\\adminpanel\\categories\\view.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|c:\\users\\kostya\\source\\website\\js\\homework_2\\js\\mainjs\\adminpaneljs\\categories_add.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|solutionrelative:js\\mainjs\\adminpaneljs\\categories_add.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|c:\\users\\kostya\\source\\website\\js\\homework_2\\html\\page\\adminpanel\\categories\\deletemodal.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|solutionrelative:html\\page\\adminpanel\\categories\\deletemodal.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|c:\\users\\kostya\\source\\website\\js\\homework_2\\js\\mainjs\\loadpartcode.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|solutionrelative:js\\mainjs\\loadpartcode.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D880FB15-C698-4622-9B29-3F943AE5140C}|C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2|c:\\users\\kostya\\source\\website\\js\\homework_2\\js\\mainjs\\adminpaneljs\\categories_view.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,54 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "View.html",
-              "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Page\\AdminPanel\\Categories\\View.html",
-              "RelativeDocumentMoniker": "html\\Page\\AdminPanel\\Categories\\View.html",
-              "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Page\\AdminPanel\\Categories\\View.html",
-              "RelativeToolTip": "html\\Page\\AdminPanel\\Categories\\View.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-04-14T18:29:08.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Categories_view.js",
               "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\js\\MainJS\\AdminPanelJS\\Categories_view.js",
               "RelativeDocumentMoniker": "js\\MainJS\\AdminPanelJS\\Categories_view.js",
               "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\js\\MainJS\\AdminPanelJS\\Categories_view.js",
               "RelativeToolTip": "js\\MainJS\\AdminPanelJS\\Categories_view.js",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-14T18:24:31.637Z",
+              "WhenOpened": "2025-04-15T20:40:32.524Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Categories_add.js",
-              "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\js\\MainJS\\AdminPanelJS\\Categories_add.js",
-              "RelativeDocumentMoniker": "js\\MainJS\\AdminPanelJS\\Categories_add.js",
-              "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\js\\MainJS\\AdminPanelJS\\Categories_add.js",
-              "RelativeToolTip": "js\\MainJS\\AdminPanelJS\\Categories_add.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "LoadPartCode.js",
+              "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\js\\MainJS\\LoadPartCode.js",
+              "RelativeDocumentMoniker": "js\\MainJS\\LoadPartCode.js",
+              "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\js\\MainJS\\LoadPartCode.js",
+              "RelativeToolTip": "js\\MainJS\\LoadPartCode.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-14T18:24:26.691Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DeleteModal.html",
-              "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Page\\AdminPanel\\Categories\\DeleteModal.html",
-              "RelativeDocumentMoniker": "html\\Page\\AdminPanel\\Categories\\DeleteModal.html",
-              "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\JS\\Homework_2\\html\\Page\\AdminPanel\\Categories\\DeleteModal.html",
-              "RelativeToolTip": "html\\Page\\AdminPanel\\Categories\\DeleteModal.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-04-14T18:20:10.309Z",
+              "WhenOpened": "2025-04-15T20:39:05.844Z",
               "EditorCaption": ""
             }
           ]

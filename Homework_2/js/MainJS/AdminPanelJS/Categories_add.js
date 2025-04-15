@@ -11,7 +11,7 @@ categiryForm.onsubmit = async (e) => {
         image: newAvatar
     }
     const xhr = new XMLHttpRequest();
-    const url = "https://goose.itstep.click/api/Categories/add";
+    const url = `${window.API_BASE_URL}/api/Categories/add`;
 
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");

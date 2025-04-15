@@ -9,7 +9,7 @@ formRegistration.onsubmit = async (e) => {
         password: document.getElementById("user_password").value,
     }
     const xhr = new XMLHttpRequest();
-    const url = "https://goose.itstep.click/api/Account/login";
+    const url = `${window.API_BASE_URL}/api/Account/login`;
 
     const data = {
         email: formData.email,
@@ -28,7 +28,7 @@ formRegistration.onsubmit = async (e) => {
                 localStorage.setItem("token", token);
                     // if admin 
                 try {
-                    const response = await axios.get('https://goose.itstep.click/api/Users/all', {
+                    const response = await axios.get(`${window.API_BASE_URL}/api/Users/all`, {
                         headers: {
                             'accept': '*/*',
                             'Authorization': `Bearer ${token}`

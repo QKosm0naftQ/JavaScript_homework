@@ -13,6 +13,16 @@
                 </a>
             </li>
             <li>
+                <button class="w-full flex items-center p-2 text-gray-700 rounded hover:bg-gray-100 cursor-pointer" onclick="toggleDropdown('productsDropdown')">
+                    🛍️ <span class="ml-2">Продукти</span>
+                </button>
+                <ul id="productsDropdown" class="hidden pl-4">
+                    <li><a href="/html/Page/AdminPanel/Products/View.html" class="block w-full text-left p-3 hover:bg-gray-100 transition duration-200 cursor-pointer">Переглянути</a></li>
+                    <li><a href="/html/Page/AdminPanel/Products/Add.html" class="block w-full text-left p-3 hover:bg-gray-100 transition duration-200 cursor-pointer">Додати</a></li>
+                </ul>
+
+            </li>
+            <li>
                 <button class="w-full flex items-center p-2 text-gray-700 rounded hover:bg-gray-100 cursor-pointer" onclick="toggleDropdown('categoriesDropdown')">
                     📁 <span class="ml-2">Категорія</span>
                 </button>

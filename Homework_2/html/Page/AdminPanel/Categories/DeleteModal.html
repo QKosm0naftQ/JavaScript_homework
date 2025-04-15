@@ -46,7 +46,7 @@
     function confirmDeleteCategory() {
         console.log("Видаляємо категорію з id:", selectedCategoryId);
 
-        axios.delete(`https://goose.itstep.click/api/Categories/delete/${selectedCategoryId}`)
+        axios.delete(`${window.API_BASE_URL}/api/Categories/delete/${selectedCategoryId}`)
             .then(response => {
                 console.log("Успішно видалено:", response.data);
                 closeDeleteModal();

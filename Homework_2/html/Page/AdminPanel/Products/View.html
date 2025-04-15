@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Перегляд продуктів</title>
+    <script src="/js/MainJS/LoadPartCode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/speakingurl/13.0.0/speakingurl.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.14.0/qs.min.js" integrity="sha512-6yLIYbXqyvjSDYNO1pgBRjwWPBw66kMOb+sHqrvn457+iJiret0PeHzUlpLKHH0fYzX9bxGtPDqQ84xKrhEYSQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <script>loadFileHtml('/html/Assets.html');</script>
+    <div class="flex pt-11">
+        <script>loadFileHtml('/html/Parts/AsideAdminPanel.html');</script>
+        <main id="viewProduct" class="flex-1 p-6">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">Фото</th>
+                            <th scope="col" class="px-6 py-3">Назва</th>
+                            <th scope="col" class="px-6 py-3">Категорія</th>
+                            <th scope="col" class="px-6 py-3">Пріоритет</th>
+                            <th scope="col" class="px-6 py-3">Ціна</th>
+                            <th scope="col" class="px-6 py-3">Опис</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listCategories">
+                    </tbody>
+                </table>
+            </div>
+            <!--  -->
+            <!--  -->
+            <!--  -->
+            <div class="flex justify-center mt-4">
+                <nav aria-label="Page navigation example">
+                    <ul class="inline-flex -space-x-px text-base h-10" id="pagination">
+                    </ul>
+                </nav>
+            </div>
+
+
+
+        </main>
+
+        <script src="/js/MainJS/AdminPanelJS/Products_view.js"></script>
+    </div>
+
+</body>
+</html>
