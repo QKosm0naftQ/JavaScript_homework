@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "l9L2uqE8kDs+9tomwWlZSyo2rCOFu1etH5WF9z0gLFU=",
+  "Source": "LohikaBackend",
+  "BasePath": "_content/LohikaBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

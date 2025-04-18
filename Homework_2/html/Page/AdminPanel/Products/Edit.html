@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Редагування продуктів</title>
+    <script src="/js/MainJS/LoadPartCode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/speakingurl/13.0.0/speakingurl.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.14.0/qs.min.js" integrity="sha512-6yLIYbXqyvjSDYNO1pgBRjwWPBw66kMOb+sHqrvn457+iJiret0PeHzUlpLKHH0fYzX9bxGtPDqQ84xKrhEYSQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.tiny.cloud/1/vkb9010bb5k4a320fftb5cazzy21egn3u00e3pfdj60nqnrl/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+</head>
+<body>
+    <script>loadFileHtml('/html/Assets.html');</script>
+
+    <div class="flex pt-11">
+        <script>loadFileHtml('/html/Parts/AsideAdminPanel.html');</script>
+        <main id="editProductPage" class="flex-1 p-6 max-w-5xl mx-auto">
+            <div class="relative bg-white rounded-lg shadow-2xl">
+                <form class="p-6 space-y-6" id="editProductForm" action="#">
+                    <h2 class="text-2xl font-bold text-center text-blue-600">Редагувати продукт</h2>
+
+                    <!-- Вибір фото -->
+                    <div class="col-span-2 border-2 border-dashed border-[#0db865] rounded-xl p-6 text-center cursor-pointer relative">
+                        <input type="file" multiple class="absolute inset-0 opacity-0 cursor-pointer" accept="image/*" id="imageInput">
+                        <span class="text-gray-500">Drag or select photos</span>
+                    </div>
+
+                    <!-- Список зображень -->
+                    <div id="imagesList" class="flex items-center justify-start overflow-x-auto space-x-2 max-w-full py-2" style="max-width:850px"></div>
+
+                    <div class="grid gap-4 grid-cols-1">
+                        <!-- Назва -->
+                        <div class="relative z-0 w-full group">
+                            <input type="text" id="title" placeholder=" " required
+                                   class="block py-3 px-4 w-full text-md text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 peer" />
+                            <label for="title" class="absolute text-md text-gray-500 bg-white px-2 left-3 -top-3 transform scale-90 peer-placeholder-shown:scale-100 peer-placeholder-shown:top-3 peer-focus:scale-90 peer-focus:-top-3 peer-focus:text-blue-500 transition-all">
+                                Назва продукту
+                            </label>
+                        </div>
+
+                        <!-- Категорія -->
+                        <div class="relative z-0 w-full group">
+                            <select id="category" class="block py-3 px-4 w-full text-md text-gray-900 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 peer">
+                                <option value="0">Оберіть категорію</option>
+                            </select>
+                            <label for="category" class="absolute text-md text-gray-500 bg-white px-2 left-3 -top-3 transform scale-90 peer-focus:scale-90 peer-focus:-top-3 transition-all">
+                                Категорія
+                            </label>
+                        </div>
+
+                        <!-- Пріоритет -->
+                        <div class="relative z-0 w-full group">
+                            <input type="number" id="priority" placeholder=" " required
+                                   class="block py-3 px-4 w-full text-md text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 peer" />
+                            <label for="priority" class="absolute text-md text-gray-500 bg-white px-2 left-3 -top-3 transform scale-90 peer-placeholder-shown:scale-100 peer-placeholder-shown:top-3 peer-focus:scale-90 peer-focus:-top-3 peer-focus:text-blue-500 transition-all">
+                                Пріоритет
+                            </label>
+                        </div>
+
+                        <!-- Ціна -->
+                        <div class="relative z-0 w-full group">
+                            <input type="number" id="price" step="0.01" placeholder=" " required
+                                   class="block py-3 px-4 w-full text-md text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 peer" />
+                            <label for="price" class="absolute text-md text-gray-500 bg-white px-2 left-3 -top-3 transform scale-90 peer-placeholder-shown:scale-100 peer-placeholder-shown:top-3 peer-focus:scale-90 peer-focus:-top-3 peer-focus:text-blue-500 transition-all">
+                                Ціна
+                            </label>
+                        </div>
+
+                        <!-- Опис -->
+                        <div class="relative z-0 w-full group">
+                            <label for="description" class="block text-md font-medium text-gray-700 mb-2">Опис</label>
+                            <textarea id="description"
+                                      placeholder="Введіть опис..."
+                                      class="block py-3 px-4 w-full text-md text-gray-900 bg-transparent border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 h-32 resize-none"></textarea>                        </div>
+
+                        <!-- Кнопка -->
+                        <button type="submit"
+                                class="w-full inline-flex items-center justify-center text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mt-4 transition">
+                            💾 Зберегти зміни
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="/js/MainJS/AdminPanelJS/Products_edit.js"></script>
+</body>
+</html>

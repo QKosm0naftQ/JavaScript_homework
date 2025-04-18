@@ -52,6 +52,11 @@ async function fetchProducts() {
             <td class="px-6 py-4 text-gray-900 dark:text-white max-w-xs">
                 ${item.description}
             </td>
+            <td class="px-6 py-4 text-gray-900 dark:text-white">
+                <ul>
+                    <li> <a href="/html/Page/AdminPanel/Products/Edit.html?id=${item.id}" class="font-medium text-red-600 dark:text-red-500 hover:underline">Редагувати</a></li>
+                </ul>
+            </td>
         </tr>
     `;
         });
@@ -71,7 +76,7 @@ function searchDataPage() {
             //event.preventDefault(); // Запобігаємо переходу за посиланням
             const page = event.target.getAttribute('data-page'); // Отримуємо значення data-page
             search.page = page;
-            fetchCategories();
+            fetchProducts();
             console.log('Вибрано сторінку:', page);
         });
     });

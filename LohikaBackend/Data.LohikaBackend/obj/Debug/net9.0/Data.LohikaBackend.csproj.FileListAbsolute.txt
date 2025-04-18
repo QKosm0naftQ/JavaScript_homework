@@ -1,0 +1,15 @@
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\bin\Debug\net9.0\Data.LohikaBackend.deps.json
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\bin\Debug\net9.0\Data.LohikaBackend.runtimeconfig.json
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\bin\Debug\net9.0\Data.LohikaBackend.dll
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\bin\Debug\net9.0\Data.LohikaBackend.pdb
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\obj\Debug\net9.0\Data.LohikaBackend.csproj.AssemblyReference.cache
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\obj\Debug\net9.0\Data.LohikaBackend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\obj\Debug\net9.0\Data.LohikaBackend.AssemblyInfoInputs.cache
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\obj\Debug\net9.0\Data.LohikaBackend.AssemblyInfo.cs
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\obj\Debug\net9.0\Data.LohikaBackend.csproj.CoreCompileInputs.cache
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\obj\Debug\net9.0\Data.LohikaBackend.sourcelink.json
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\obj\Debug\net9.0\Data.LohikaBackend.dll
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\obj\Debug\net9.0\refint\Data.LohikaBackend.dll
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\obj\Debug\net9.0\Data.LohikaBackend.pdb
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\obj\Debug\net9.0\Data.LohikaBackend.genruntimeconfig.cache
+C:\Users\Kostya\source\WebSite\JS\LohikaBackend\Data.LohikaBackend\obj\Debug\net9.0\ref\Data.LohikaBackend.dll
