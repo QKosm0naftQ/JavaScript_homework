@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Погода</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="flex items-center justify-center min-h-screen bg-gray-100">
+        <div class="w-full max-w-md p-4 bg-white rounded-lg shadow space-y-5">
+            <div id="user_info" class="space-y-2">
+                <h3>⏱ Тривалість активної сесії: <span id="session_time">0 с</span></h3>
+                <h3>📤 Кількість надісланих запитів: <span id="request_count">0</span></h3>
+            </div>
+            
+            <div>
+                <label for="country" class="block mb-2 text-lg font-medium text-gray-900">Країна</label>
+                <select id="country" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option selected>Оберіть країну</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="city" class="block mb-2 text-lg font-medium text-gray-900">Місто</label>
+                <select id="city" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                    <option selected>Оберіть місто</option>
+                </select>
+            </div>
+
+            <button id="btnSend" type="button" class="w-full text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-lg px-6 py-3 text-center">
+                Підтвердити
+            </button>
+            <!-- 
+                /////////////////////////
+                -->
+            <div id="default-carousel" class="relative w-full max-w-md mx-auto mt-5" data-carousel="static">
+                <div id="imageInfoWeather" class="relative h-60 overflow-hidden rounded-md">
+                    <!-- Item 1 -->
+                    <!--<div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://placehold.co/600x160?text=1" class="absolute block w-full h-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="1">
+                    </div>-->
+                    <!-- Item 2 -->
+                    <!--<div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://placehold.co/600x160?text=2" class="absolute block w-full h-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="2">
+                    </div>-->
+                    <!-- Item 3 -->
+                    <!--<div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://placehold.co/600x160?text=3" class="absolute block w-full h-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="3">
+                    </div>-->
+                </div>
+
+                <!--<div class="absolute z-30 flex justify-center w-full space-x-2 bottom-2">-->
+                    <!--<button type="button" class="w-2.5 h-2.5 rounded-full bg-gray-300" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-2.5 h-2.5 rounded-full bg-gray-300" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-2.5 h-2.5 rounded-full bg-gray-300" aria-label="Slide 3" data-carousel-slide-to="2"></button>-->
+                <!--</div>-->
+
+                <!--<button type="button" class="absolute bottom-2 left-2 z-30 flex items-center justify-center px-2 cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-white/50 hover:bg-white/70">
+                        <svg class="w-3 h-3 text-black" fill="none" viewBox="0 0 6 10">
+                            <path d="M5 1L1 5l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>-->
+
+                <!--<button type="button" class="absolute bottom-2 right-2 z-30 flex items-center justify-center px-2 cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-white/50 hover:bg-white/70">
+                        <svg class="w-3 h-3 text-black" fill="none" viewBox="0 0 6 10">
+                            <path d="M1 9l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>-->
+
+
+
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="LogicJS.js"></script>
+    <script src="axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>
+</html>

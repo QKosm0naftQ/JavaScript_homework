@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LohikaBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42d274f3d7666d7aef9de7d635f62294000a2f1c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8706b932862980ddc3d179de0f471fe838b31d02")]
 [assembly: System.Reflection.AssemblyProductAttribute("LohikaBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LohikaBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
